@@ -1,8 +1,10 @@
 import React from 'react';
+import './ParsedArticle.css';
 
-const ParsedArticle = () => (
-    <div>ParseArticle is working!</div>
-);
-
+const ParsedArticle = (props) => {
+    return (
+        <div className="ParsedArticle" dangerouslySetInnerHTML={{__html: props.content}}></div>
+    );
+};
 
 export default ParsedArticle;

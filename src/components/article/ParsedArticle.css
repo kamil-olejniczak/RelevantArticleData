@@ -1,0 +1,27 @@
+.ParsedArticle {
+    float: left;
+    width: 70%;
+    text-align: justify;
+    margin: 20px 0 50px;
+    padding: 10px 10px;
+    position: sticky;
+    background-color: white;
+    border-radius: 5px;
+}
+
+img {
+    width: 100%
+}
+
+.ParsedArticle figure {
+    margin: 0;
+}
+
+@media only screen and (max-width: 1670px) {
+    .ParsedArticle {
+        float: none;
+        display: block;
+        margin: 20px auto;
+        width: 90%;
+    }
+}
