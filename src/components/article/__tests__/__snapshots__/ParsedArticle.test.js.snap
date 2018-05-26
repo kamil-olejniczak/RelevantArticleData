@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ParsedArticle tests renders correctly 1`] = `
+<div
+  className="ParsedArticle"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<div><p>Fake Data</p></div>",
+    }
+  }
+/>
+`;
