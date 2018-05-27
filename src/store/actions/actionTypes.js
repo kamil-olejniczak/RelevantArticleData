@@ -1,0 +1,7 @@
+export const INIT_GET_ARTICLE = 'INIT_GET_ARTICLE';
+export const RESOLVING_ARTICLE = 'RESOLVING_ARTICLE';
+export const GET_ARTICLE = 'GET_ARTICLE';
+
+export const INVALID_URL = 'INVALID_URL';
+
+export const ERROR_OCCURRED = 'ERROR_OCCURRED';
