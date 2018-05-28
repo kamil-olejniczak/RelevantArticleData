@@ -1,0 +1,29 @@
+.ArticleSearch {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.ArticleSearch input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 20px;
+    margin-bottom: 30px;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.ArticleSearch div h1, h2 {
+    text-align: center;
+    color: #7c795d;
+}
+
+.ArticleSearch h1 {
+    font-size: 3em;
+}
+
+.ArticleSearch h2 {
+    font-size: 2em;
+}
