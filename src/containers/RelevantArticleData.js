@@ -1,27 +1,44 @@
 import React, {Component} from 'react';
 import TagStatistics from '../components/article/TagStatistics';
 import RecentlyVisitedArticles from '../components/article/RecentlyVisitedArticles';
+import {connect} from 'react-redux';
 import ParsedArticle from '../components/article/ParsedArticle';
 import ArticleSearch from './ArticleSearch';
+import './RelevantArticleData.css';
 import ArticleData from '../components/article/ArticleData';
-import withNavbar from "../components/ui/navigation/Navbar";
+import withNavbar from '../components/ui/navigation/Navbar';
+import Spinner from "../components/ui/Spinner";
 
-class RelevantArticleData extends Component {
+export class RelevantArticleData extends Component {
     render() {
         return (
             <div>
                 <ArticleSearch/>
-                <div>
-                    <ArticleData/>
-                    <ParsedArticle/>
-                    <div className="dataDiv">
-                        <RecentlyVisitedArticles/>
-                        <TagStatistics/>
-                    </div>
-                </div>
+                {this.props.isArticleShown ? (
+                    <div>
+                        <ArticleData data={this.props.data}/>
+                        <ParsedArticle/>
+                        <div className="dataDiv">
+                            <RecentlyVisitedArticles />
+                            <TagStatistics/>
+                        </div>
+                    </div>) : null}
+                {this.props.dataIsResolving ? (<Spinner/>) : null}
             </div>
         );
     }
 }
 
-export default withNavbar(RelevantArticleData);
+const mapStateToProps = state => {
+    return {
+        data: state.article.data,
+        content: state.article.content,
+        recentlyVisited: state.article.recentlyVisited,
+        statistics: state.article.statistics,
+        isArticleShown: state.article.isArticleShown,
+        isModalClosedByUser: state.article.isModalClosedByUser,
+        dataIsResolving: state.article.dataIsResolving
+    };
+};
+
+export default connect(mapStateToProps, null)(withNavbar(RelevantArticleData));
