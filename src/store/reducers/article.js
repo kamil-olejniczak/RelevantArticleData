@@ -8,21 +8,22 @@ export const initialState = {
     error: '',
     isArticleShown: false,
     isModalClosedByUser: false,
-    dataIsResolving: false
+    isDataBeingResolved: false
 };
 
 const articleReducer = (state = initialState, action) => {
     switch (action.type) {
-        case actionTypes.GET_ARTICLE: {
+        case actionTypes.GET_ARTICLE:
+        case actionTypes.RELOAD_ARTICLE: {
             return {
                 ...state,
                 data: action.data,
                 statistics: action.statistics,
-                content: action.content,
                 recentlyVisited: action.recentlyVisited,
+                content: action.content,
                 isArticleShown: true,
                 isModalClosedByUser: false,
-                dataIsResolving: false
+                isDataBeingResolved: false
             };
         }
         case actionTypes.RESOLVING_ARTICLE: {
@@ -31,7 +32,7 @@ const articleReducer = (state = initialState, action) => {
                 error: '',
                 isArticleShown: false,
                 isModalClosedByUser: true,
-                dataIsResolving: true,
+                isDataBeingResolved: true,
             };
         }
         case actionTypes.INVALID_URL: {
@@ -41,13 +42,37 @@ const articleReducer = (state = initialState, action) => {
                 isArticleShown: false
             };
         }
+        case actionTypes.CLEAR_ARTICLE: {
+            return {
+                ...state,
+                data: {},
+                content: '',
+                error: '',
+                isArticleShown: false,
+                isModalClosedByUser: true
+            };
+        }
+        case actionTypes.CLEAR_DATA: {
+            return {
+                ...initialState,
+            };
+        }
+        case actionTypes.SAVE_DATA: {
+            return state;
+        }
+        case actionTypes.CLOSE_MODAL: {
+            return {
+                ...state,
+                isModalClosedByUser: true
+            };
+        }
         case actionTypes.ERROR_OCCURRED: {
             return {
                 ...state,
                 error: action.error.message,
                 isArticleShown: false,
                 isModalClosedByUser: true,
-                dataIsResolving: false,
+                isDataBeingResolved: false,
             };
         }
         default:
