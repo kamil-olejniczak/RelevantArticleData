@@ -6,24 +6,27 @@ import ParsedArticle from '../components/article/ParsedArticle';
 import ArticleSearch from './ArticleSearch';
 import './RelevantArticleData.css';
 import ArticleData from '../components/article/ArticleData';
+import * as articleActions from '../store/actions/article';
+import * as localStorageActions from '../store/actions/localStorage';
 import withNavbar from '../components/ui/navigation/Navbar';
 import Spinner from "../components/ui/Spinner";
 
-export class RelevantArticleData extends Component {
+class RelevantArticleData extends Component {
     render() {
         return (
             <div>
                 <ArticleSearch/>
                 {this.props.isArticleShown ? (
                     <div>
-                        <ArticleData data={this.props.data}/>
-                        <ParsedArticle/>
+                        <ArticleData data={this.props.data} isModalClosedByUser={this.props.isModalClosedByUser}/>
+                        <ParsedArticle content={this.props.content}/>
                         <div className="dataDiv">
-                            <RecentlyVisitedArticles />
-                            <TagStatistics/>
+                            <RecentlyVisitedArticles recentlyVisited={this.props.recentlyVisited}
+                                                     clearData={this.props.clearData}/>
+                            <TagStatistics tagStats={this.props.statistics}/>
                         </div>
                     </div>) : null}
-                {this.props.dataIsResolving ? (<Spinner/>) : null}
+                {this.props.isDataBeingResolved ? (<Spinner/>) : null}
             </div>
         );
     }
@@ -37,8 +40,16 @@ const mapStateToProps = state => {
         statistics: state.article.statistics,
         isArticleShown: state.article.isArticleShown,
         isModalClosedByUser: state.article.isModalClosedByUser,
-        dataIsResolving: state.article.dataIsResolving
+        isDataBeingResolved: state.article.isDataBeingResolved
     };
 };
 
-export default connect(mapStateToProps, null)(withNavbar(RelevantArticleData));
+const mapDispatchToProps = dispatch => {
+    return {
+        clearArticle: () => dispatch(articleActions.clearArticle()),
+        clearData: () => dispatch(localStorageActions.clearData())
+    };
+};
+
+export const PureRelevantArticleData = (withNavbar(RelevantArticleData));
+export default connect(mapStateToProps, mapDispatchToProps)(withNavbar(RelevantArticleData));

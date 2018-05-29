@@ -1,7 +1,9 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import * as articleActions from '../../store/actions/article';
 import './ArticleData.css';
 
-const ArticleData = ({data}) => {
+const ArticleData = ({data, isModalClosedByUser, closeModalWithData}) => {
     const title = data.title && (<p>You are currently reading: "{data.title}".</p>);
     const datePublished = data.date_published && ( <p>Which was published on {data.date_published}.</p>);
     const domain = data.domain && (<p>On "{data.domain}" domain.</p>);
@@ -11,18 +13,25 @@ const ArticleData = ({data}) => {
     const leadImage = data.lead_image_url && (<div><p>Lead image to help you memorise it:</p>
         <img className="leadImg" src={data.lead_image_url} alt={data.excerpt}/></div>);
     return (
-        <div className="ArticleData">
-            <span id="close" onClick={() => console.log('onClick span #close')}><i
-                className='far fa-times-circle'/></span>
-            {title}
-            {datePublished}
-            {domain}
-            {dek}
-            {excerpt}
-            {wordCount}
-            {leadImage}
-        </div>
+        isModalClosedByUser ? null : (
+            <div className="ArticleData">
+                <span id="close" onClick={closeModalWithData}><i className='far fa-times-circle'/></span>
+                {title}
+                {datePublished}
+                {domain}
+                {dek}
+                {excerpt}
+                {wordCount}
+                {leadImage}
+            </div>
+        )
     );
 };
 
-export default ArticleData;
+const mapDispatchToProps = dispatch => {
+    return {
+        closeModalWithData: () => dispatch(articleActions.closeModalWithData())
+    };
+};
+
+export default connect(null, mapDispatchToProps)(ArticleData);
