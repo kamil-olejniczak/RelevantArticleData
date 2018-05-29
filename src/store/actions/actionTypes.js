@@ -1,7 +1,15 @@
 export const INIT_GET_ARTICLE = 'INIT_GET_ARTICLE';
 export const RESOLVING_ARTICLE = 'RESOLVING_ARTICLE';
 export const GET_ARTICLE = 'GET_ARTICLE';
+export const CLEAR_ARTICLE = 'CLEAR_ARTICLE';
+export const INIT_RELOAD_ARTICLE = 'INIT_RELOAD_ARTICLE';
+export const RELOAD_ARTICLE = 'RELOAD_ARTICLE';
+export const INIT_CLEAR_DATA = 'INIT_CLEAR_DATA';
+export const CLEAR_DATA = 'CLEAR_DATA';
+export const INIT_SAVE_DATA = 'INIT_SAVE_DATA';
+export const SAVE_DATA = 'SAVE_DATA';
 
 export const INVALID_URL = 'INVALID_URL';
+export const CLOSE_MODAL = 'CLOSE_MODAL';
 
 export const ERROR_OCCURRED = 'ERROR_OCCURRED';
