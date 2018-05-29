@@ -25,16 +25,16 @@ Data used in this app is stored in your browser local storage, you can extract i
 
 ## Screenshots
 
-![main page](https://github.com/kamil-olejniczak/ClientDatabaseAngularFront/blob/screenshots/main_page.png "Main page with article search")
+![main page](https://github.com/kamil-olejniczak/RelevantArticleData/blob/screenshots/main_page.png "Main page with article search")
 Main page with article search.
 
-![parsed article](https://github.com/kamil-olejniczak/ClientDatabaseAngularFront/blob/screenshots/filter_applied.png "Parsed article")
+![parsed article](https://github.com/kamil-olejniczak/RelevantArticleData/blob/screenshots/parsed_article_with_stats.png "Parsed article")
 Parsed article.
 
-![div with article data](https://github.com/kamil-olejniczak/ClientDatabaseAngularFront/blob/screenshots/client_details.png "Article data div")
+![div with article data](https://github.com/kamil-olejniczak/RelevantArticleData/blob/screenshots/closeable_div_with_article_data.png "Article data div")
 Article data div.
 
-![recently visited articles](https://github.com/kamil-olejniczak/ClientDatabaseAngularFront/blob/screenshots/secondary_route.png "Recently visited articles by user")
+![recently visited articles](https://github.com/kamil-olejniczak/RelevantArticleData/blob/screenshots/last_five_user_articles.png "Recently visited articles by user")
 Recently visited articles by user.
 
 ## Used packages
