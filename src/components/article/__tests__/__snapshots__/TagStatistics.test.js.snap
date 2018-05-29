@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TagStatistics tests renders correctly 1`] = `
+<div
+  className="TagStatistics"
+>
+  <span
+    className="header"
+  >
+    Tag stats of all time:
+  </span>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Tag Name
+        </th>
+        <th>
+          Occurrences
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          span
+        </td>
+        <td>
+          10
+        </td>
+      </tr>
+      <tr>
+        <td>
+          i
+        </td>
+        <td>
+          9
+        </td>
+      </tr>
+      <tr>
+        <td>
+          div
+        </td>
+        <td>
+          8
+        </td>
+      </tr>
+      <tr>
+        <td>
+          table
+        </td>
+        <td>
+          7
+        </td>
+      </tr>
+      <tr>
+        <td>
+          hr
+        </td>
+        <td>
+          6
+        </td>
+      </tr>
+      <tr>
+        <td>
+          textarea
+        </td>
+        <td>
+          5
+        </td>
+      </tr>
+      <tr>
+        <td>
+          input
+        </td>
+        <td>
+          4
+        </td>
+      </tr>
+      <tr>
+        <td>
+          a
+        </td>
+        <td>
+          3
+        </td>
+      </tr>
+      <tr>
+        <td>
+          br
+        </td>
+        <td>
+          2
+        </td>
+      </tr>
+      <tr>
+        <td>
+          p
+        </td>
+        <td>
+          2
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

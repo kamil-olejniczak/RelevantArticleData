@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecentlyVisitedArticles tests renders correctly 1`] = `
+<div
+  className="RecentlyVisitedArticles"
+>
+  <span
+    className="header"
+  >
+    Recently Visited Articles:
+  </span>
+  <span
+    id="resetStats"
+    onClick={[Function]}
+  >
+    Reset stats
+  </span>
+  <div>
+    <a
+      href="/recentlyVisited"
+      onClick={[Function]}
+    >
+      Title: 
+      Title to long, show detailed statistics.
+    </a>
+    <br />
+    <a
+      href="SomeUrl, to long to be displayed in div, additional length"
+    >
+      Url: 
+      Link to long, click here to follow it.
+    </a>
+    <hr />
+  </div>
+  <div>
+    <a
+      href="/recentlyVisited"
+      onClick={[Function]}
+    >
+      Title: 
+      Title to long, show detailed statistics.
+    </a>
+    <br />
+    <a
+      href="SomeUrl2, to long to be displayed in div, additional length"
+    >
+      Url: 
+      Link to long, click here to follow it.
+    </a>
+    <hr />
+  </div>
+</div>
+`;

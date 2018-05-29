@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleData tests renders correctly 1`] = `
+<div
+  className="ArticleData"
+>
+  <span
+    id="close"
+    onClick={[Function]}
+  >
+    <i
+      className="far fa-times-circle"
+    />
+  </span>
+  <p>
+    You are currently reading: "
+    Some Title
+    ".
+  </p>
+  <p>
+    Which was published on 
+    1970-01-01
+    .
+  </p>
+  <p>
+    On "
+    www.dabliu.com
+    " domain.
+  </p>
+  <p>
+    Headline of the story (dek): "
+    Short dek text
+    ".
+  </p>
+  <p>
+    Hand-crafted summary of content (excerpt): "
+    Short excerpt text
+    ".
+  </p>
+  <p>
+    This article has: 
+    111
+     words.
+  </p>
+  <div>
+    <p>
+      Lead image to help you memorise it:
+    </p>
+    <img
+      alt="Short excerpt text"
+      className="leadImg"
+      src="http://www.dabliu.pl/image.html"
+    />
+  </div>
+</div>
+`;
