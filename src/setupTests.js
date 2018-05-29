@@ -1,11 +1,18 @@
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import {fakeRecentlyVisited, fakeTagStatistics} from './utils/__fixtures__/fakeData';
 
 Enzyme.configure({adapter: new Adapter()});
 
 //localStorage mock
-const localStorageMock = (function () {
-    let store = {};
+const initialState = {
+    tagStats: JSON.stringify(fakeTagStatistics),
+    recentVisit: JSON.stringify(fakeRecentlyVisited.recentlyVisited)
+};
+export const localStorageMock = (function () {
+    let store = {
+        ...initialState
+    };
 
     return {
         getItem: function (key) {
@@ -16,6 +23,9 @@ const localStorageMock = (function () {
         },
         clear: function () {
             store = {};
+        },
+        setUpForTests: function () {
+            store = {...initialState};
         }
     };
 
