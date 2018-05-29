@@ -1,0 +1,22 @@
+.RecentlyVisitedArticles {
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.RecentlyVisitedArticles tr {
+    text-align: center;
+}
+
+.header {
+    display: inline-block;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+#resetStats {
+    float: right;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
