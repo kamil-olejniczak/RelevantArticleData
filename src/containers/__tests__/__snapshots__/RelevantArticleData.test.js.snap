@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailedRecentlyVisitedArticles tests renders correctly 1`] = `
+<div>
+  <ul
+    className="Navbar"
+  >
+    <li
+      onClick={[Function]}
+    >
+      Search for an article
+    </li>
+    <a
+      href="/recentlyVisited"
+      onClick={[Function]}
+    >
+      Your articles
+    </a>
+    <li>
+      <a
+        href="http://github.com/kamil-olejniczak"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        GitHub
+      </a>
+    </li>
+  </ul>
+  <div>
+    <div
+      className="ArticleSearch"
+    >
+      <div>
+        <h1>
+          Relevant Article Data
+        </h1>
+        <h2>
+          Read only valuable content
+        </h2>
+      </div>
+      <input
+        className={null}
+        onKeyDown={[Function]}
+        placeholder="Paste link to article..."
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+`;

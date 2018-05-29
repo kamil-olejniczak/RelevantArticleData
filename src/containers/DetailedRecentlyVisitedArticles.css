@@ -1,0 +1,10 @@
+.DetailedRecentlyVisitedArticles {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.DetailedRecentlyVisitedArticles a:visited {
+    color: #00529B;
+}

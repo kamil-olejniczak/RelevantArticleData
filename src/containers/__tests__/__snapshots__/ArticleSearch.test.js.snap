@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleSearch tests renders correctly 1`] = `
+<div
+  className="ArticleSearch"
+>
+  <div>
+    <h1>
+      Relevant Article Data
+    </h1>
+    <h2>
+      Read only valuable content
+    </h2>
+  </div>
+  <input
+    className={null}
+    onKeyDown={[Function]}
+    placeholder="Paste link to article..."
+    type="text"
+  />
+</div>
+`;
