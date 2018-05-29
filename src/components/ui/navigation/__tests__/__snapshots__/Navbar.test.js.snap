@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar tests renders correctly 1`] = `
+<div>
+  <ul
+    className="Navbar"
+  >
+    <li
+      onClick={[Function]}
+    >
+      Search for an article
+    </li>
+    <a
+      href="/recentlyVisited"
+      onClick={[Function]}
+    >
+      Your articles
+    </a>
+    <li>
+      <a
+        href="http://github.com/kamil-olejniczak"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        GitHub
+      </a>
+    </li>
+  </ul>
+  <div>
+    Hello
+  </div>
+</div>
+`;

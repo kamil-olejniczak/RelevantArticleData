@@ -1,0 +1,33 @@
+.Navbar {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: #444;
+    text-align: center;
+    user-select: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.Navbar li, .Navbar a {
+    font-size: 20px;  /*cannot use em*/
+    line-height: 50px;
+    height: 50px;
+    width: 200px;
+    border-bottom: 3px solid #444;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    transition: 0.4s background-color;
+}
+
+.Navbar li:hover, .Navbar a:hover {
+    background-color: #005f5f;
+    cursor: pointer;
+    border-bottom: 3px solid #888;
+}
+
+.Navbar li:active, .Navbar a:active {
+    background-color: #fff;
+    color: #444;
+    border-bottom: 3px solid #888;
+}
