@@ -1,0 +1,16 @@
+.TagStatistics {
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.TagStatistics tr {
+    text-align: center;
+}
+
+.TagStatistics table {
+    margin: 0 auto;
+}
+
+.TagStatistics td, .TagStatistics th {
+    padding: 2px 10px;
+}
