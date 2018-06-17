@@ -120,7 +120,5 @@ const makeFakeAction = (type) => ({
 });
 
 const checkForFieldsEquality = (state, expectedState) => {
-    Object.keys(expectedState).forEach((key) => {
-        expect(state[key]).toEqual(expectedState[key]);
-    });
+    Object.keys(expectedState).forEach(key => expect(state[key]).toEqual(expectedState[key]));
 };

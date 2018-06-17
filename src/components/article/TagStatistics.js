@@ -13,9 +13,7 @@ class TagStatistics extends Component {
                 occurenceCount: object[key]
             });
         }
-        arrayWithTagData.sort((first, second) => {
-            return -1 * (first.occurenceCount - second.occurenceCount);
-        });
+        arrayWithTagData.sort((first, second) => -1 * (first.occurenceCount - second.occurenceCount));
         return arrayWithTagData.slice(0, 10);
     }
 
@@ -31,7 +29,7 @@ class TagStatistics extends Component {
                     </tr>
                     </thead>
                     <tbody>
-                    {this.mapHashTable().map((tag) => (
+                    {this.mapHashTable().map(tag => (
                         <tr key={tag.id}>
                             <td>{tag.name}</td>
                             <td>{tag.occurenceCount}</td>

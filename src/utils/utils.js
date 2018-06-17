@@ -22,7 +22,7 @@ export function parseResponseData(data) {
 }
 
 export function parseDateForRecentlyVisitedFromLocalStorage(data) {
-    return data.map((site) => ({...site, date: new Date(site.date)}));
+    return data.map(site => ({...site, date: new Date(site.date)}));
 }
 
 export function isImproperLink(url) {

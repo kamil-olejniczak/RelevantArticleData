@@ -27,9 +27,7 @@ describe('Utils tests', () => {
             span: 1,
         };
 
-        Object.keys(map).forEach((key) => {
-            expect(map[key]).toEqual(expectedResult[key])
-        });
+        Object.keys(map).forEach(key => expect(map[key]).toEqual(expectedResult[key]));
     });
 
     it('should return false when provided link is not proper', () => {

@@ -7,9 +7,7 @@ import {fakeSortedTagStatistics, fakeTagStatistics} from "../../../utils/__fixtu
 describe('TagStatistics tests', () => {
     let wrapper;
 
-    beforeEach(() => {
-        wrapper = shallow(<TagStatistics tagStats={fakeTagStatistics}/>);
-    });
+    beforeEach(() => wrapper = shallow(<TagStatistics tagStats={fakeTagStatistics}/>));
 
     it('renders correctly', () => {
         const component = renderer.create(<TagStatistics tagStats={fakeTagStatistics}/>).toJSON();
@@ -25,8 +23,6 @@ describe('TagStatistics tests', () => {
         const rows = wrapper.find('tr');
         const rowColumns = rows.find('td').map(column => column.text());
 
-        rowColumns.forEach((column, index) => {
-            expect(column).toEqual(fakeSortedTagStatistics[index]);
-        });
+        rowColumns.forEach((column, index) => expect(column).toEqual(fakeSortedTagStatistics[index]));
     });
 });

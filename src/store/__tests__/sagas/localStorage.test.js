@@ -3,9 +3,7 @@ import {CLEAR_DATA, SAVE_DATA} from '../../actions/actionTypes';
 import {fakeRecentlyVisited, fakeTagStatistics} from '../../../utils/__fixtures__/fakeData';
 
 describe('Local storage saga tests', () => {
-    beforeEach(() => {
-        localStorage.setUpForTests();
-    });
+    beforeEach(() => localStorage.setUpForTests());
 
     it('clearLocalStorageSaga should clean local storage', () => {
         const it = clearLocalStorageSaga();
