@@ -107,7 +107,7 @@ describe('Article reducer tests', () => {
     });
 });
 
-const makeFakeAction = (type) => ({
+const makeFakeAction = type => ({
     data: {data: 'fakeData'},
     statistics: {statistics: 'fakeStatistics'},
     recentlyVisited: ['fakeRecentlyVisited'],

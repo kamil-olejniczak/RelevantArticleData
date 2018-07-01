@@ -2,7 +2,7 @@ import React from 'react';
 import './Navbar.css';
 import {Link} from 'react-router-dom';
 
-const withNavbar = (WrappedComponent) => {
+const withNavbar = WrappedComponent => {
     const search = 'Search for an article';
     return (props) => (
         <div>

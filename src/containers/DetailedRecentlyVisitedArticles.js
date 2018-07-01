@@ -5,7 +5,7 @@ import * as articleActions from '../store/actions/article';
 import './DetailedRecentlyVisitedArticles.css';
 
 export class DetailedRecentlyVisitedArticles extends Component {
-    initReloadPreviouslyVisitedArticle = (url) => {
+    initReloadPreviouslyVisitedArticle = url => {
         this.props.reloadPreviouslyVisitedArticle(url);
         this.props.history.push('/');
     };

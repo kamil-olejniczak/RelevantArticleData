@@ -8,7 +8,7 @@ export const articleResponse = ({data, content, recentlyVisited, statistics}, ty
     statistics
 });
 
-export const getSpecifiedArticle = (url) => ({
+export const getSpecifiedArticle = url => ({
     type: actionTypes.INIT_GET_ARTICLE,
     url
 });
@@ -21,7 +21,7 @@ export const clearArticle = () => ({
     type: actionTypes.CLEAR_ARTICLE,
 });
 
-export const reloadPreviouslyVisitedArticle = (url) => ({
+export const reloadPreviouslyVisitedArticle = url => ({
     type: actionTypes.INIT_RELOAD_ARTICLE,
     url
 });
@@ -34,7 +34,7 @@ export const closeModalWithData = () => ({
     type: actionTypes.CLOSE_MODAL,
 });
 
-export const errorOccurred = (error) => ({
+export const errorOccurred = error => ({
     type: actionTypes.ERROR_OCCURRED,
     error
 });

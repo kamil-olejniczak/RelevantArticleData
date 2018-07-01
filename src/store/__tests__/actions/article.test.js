@@ -66,7 +66,7 @@ describe('Article actions with types tests', () => {
     });
 });
 
-const expectArticleResponse = (type) => {
+const expectArticleResponse = type => {
     expect(actions.articleResponse(fakeData, type)).toEqual({
         type: type,
         data: fakeData.data,

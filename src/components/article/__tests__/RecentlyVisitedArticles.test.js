@@ -8,10 +8,10 @@ import {firstRecentlyVisitedSite, secondRecentlyVisitedSite} from '../../../util
 describe('RecentlyVisitedArticles tests', () => {
     let wrapper;
     const getAnchorContent = () => wrapper.find('a').first().html();
-    const componentWithData = (data) => (
+    const componentWithData = data => (
         <RecentlyVisitedArticles recentlyVisited={data} clearData={fakeData.clearData}/>
     );
-    const routerOverComponent = (data) => (
+    const routerOverComponent = data => (
         <MemoryRouter>
             {componentWithData(data)}
         </MemoryRouter>

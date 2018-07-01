@@ -4,9 +4,9 @@ const state = {
     }
 };
 const store = {
-    getState: () => (state),
+    getState: () => state,
     fillUpArray: () => {
-        state.article.recentlyVisited.push(555);
+        state.article.recentlyVisited.push('555');
     }
 };
 

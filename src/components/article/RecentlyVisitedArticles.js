@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './RecentlyVisitedArticles.css';
 
-const RecentlyVisitedArticles = (props) => (
+const RecentlyVisitedArticles = props => (
     <div className="RecentlyVisitedArticles">
         <span className="header">Recently Visited Articles:</span>
         <span id="resetStats" onClick={props.clearData}>Reset stats</span>

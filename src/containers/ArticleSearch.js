@@ -4,7 +4,7 @@ import * as articleActions from "../store/actions/article";
 import './ArticleSearch.css';
 
 class ArticleSearch extends Component {
-    searchForArticle = (event) => {
+    searchForArticle = event => {
         if (event.key === 'Enter') {
             this.props.onGetSpecifiedArticle(event.target.value);
         }

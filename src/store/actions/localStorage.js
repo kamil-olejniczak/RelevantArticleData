@@ -8,7 +8,7 @@ export const localStorageWasCleaned = () => ({
     type: actionTypes.CLEAR_DATA,
 });
 
-export const saveData = (formattedData) => ({
+export const saveData = formattedData => ({
     type: actionTypes.INIT_SAVE_DATA,
     formattedData
 });
